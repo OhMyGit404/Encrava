@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cyverra | Cybersecurity Consultation</title>
+    <meta name="description" content="Get in touch with our cybersecurity experts for a free consultation or to discuss your security needs.">
+    <meta name="keywords" content="contact, cybersecurity, consultation, services, Cyverra">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+     <!-- Navigation -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-blue-800">Encrava</a>
+
+    <ul class="hidden md:flex space-x-6 items-center">
+
+        <li class="relative group">
+          <button class="text-gray-800 font-medium hover:text-blue-700">Services</button>
+          <div class="absolute left-1/2 transform -translate-x-1/2 top-full hidden group-hover:flex bg-white border shadow-lg p-4 space-x-4 z-50">
+            <a href="services/mdr.html" class="hover:text-blue-600 whitespace-nowrap">MDR</a>
+            <a href="services/cloud-security.html" class="hover:text-blue-600 whitespace-nowrap">Cloud Security</a>
+            <a href="services/pentesting.html" class="hover:text-blue-600 whitespace-nowrap">Pen Testing</a>
+            <a href="services/awareness" class="hover:text-blue-600 whitespace-nowrap">Awareness</a>
+            <a href="services/vciso.html" class="hover:text-blue-600 whitespace-nowrap">vCISO</a>
+            <a href="services/compliance" class="hover:text-blue-600 whitespace-nowrap">Compliance</a>
+            <a href="services/devsecops.html" class="hover:text-blue-600 whitespace-nowrap">DevSecOps</a>
+          </div>
+        </li>
+
+      <li><a href="pricing.html" class="text-gray-800 hover:text-blue-700">Pricing</a></li>
+      <li><a href="about.html" class="text-gray-800 hover:text-blue-700">About</a></li>
+      <li><a href="#" class="text-gray-800 hover:text-blue-700">Resources</a></li>
+      <li><a href="contact.html" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">Get Protected</a></li>
+    </ul>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden text-3xl cursor-pointer">☰</div>
+  </div>
+</nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Let's Secure Your Business</h1>
+            <p class="subhead">Schedule a free consultation with our cybersecurity experts</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-form-container">
+                <form class="contact-form" id="cyberContactForm" novalidate>
+    <!-- Progress Indicator -->
+    <div class="form-progress">
+        <div class="progress-step active" data-step="1"></div>
+        <div class="progress-step" data-step="2"></div>
+        <div class="progress-step" data-step="3"></div>
+    </div>
+
+    <!-- Step 1: Basic Information -->
+    <fieldset class="form-step active" data-step="1">
+        <legend class="form-step-title">Contact Information</legend>
+
+        <div class="form-group">
+            <label for="fullName">
+                Full Name <span class="required">*</span>
+                <span class="tooltip" data-tooltip="Please enter your full name as it appears officially">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </span>
+            </label>
+            <input type="text" id="fullName" name="fullName" required
+                   pattern="[A-Za-z ]{3,}"
+                   title="Please enter at least 3 characters"
+                   autocomplete="name">
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">
+                Work Email <span class="required">*</span>
+                <span class="tooltip" data-tooltip="We'll use this to respond to your inquiry">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </span>
+            </label>
+            <input type="email" id="email" name="email" required
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                   autocomplete="email">
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number (Optional)</label>
+            <input type="tel" id="phone" name="phone"
+                   pattern="[0-9]{10,15}"
+                   title="Please enter a valid phone number"
+                   autocomplete="tel">
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="next-step secondary-button">Continue</button>
+        </div>
+    </fieldset>
+
+    <!-- Step 2: Service Details -->
+    <fieldset class="form-step" data-step="2">
+        <legend class="form-step-title">Service Information</legend>
+
+        <div class="form-group">
+            <label for="company">
+                Company Name
+                <span class="tooltip" data-tooltip="Your organization's legal name">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </span>
+            </label>
+            <input type="text" id="company" name="company"
+                   autocomplete="organization">
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="service">
+                Service Interested In <span class="required">*</span>
+            </label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <optgroup label="Security Services">
+                    <option value="mdr">Managed Detection & Response (MDR)</option>
+                    <option value="cloud">Cloud Security Assessment</option>
+                    <option value="pentesting">Penetration Testing</option>
+                </optgroup>
+                <optgroup label="Consulting Services">
+                    <option value="vciso">Virtual CISO (vCISO)</option>
+                    <option value="compliance">Compliance Advisory</option>
+                    <option value="devsecops">DevSecOps Implementation</option>
+                </optgroup>
+                <option value="other">Other/Not Sure</option>
+            </select>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group" id="otherServiceContainer" style="display:none;">
+            <label for="otherService">Please Specify</label>
+            <input type="text" id="otherService" name="otherService">
+        </div>
+
+        <div class="form-group">
+            <label for="urgency">
+                Urgency Level
+                <span class="tooltip" data-tooltip="Help us prioritize your request">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </span>
+            </label>
+            <div class="urgency-options">
+                <label class="urgency-option">
+                    <input type="radio" name="urgency" value="standard" checked>
+                    <span>Standard Inquiry (48h response)</span>
+                </label>
+                <label class="urgency-option">
+                    <input type="radio" name="urgency" value="urgent">
+                    <span>Urgent (24h response)</span>
+                </label>
+                <label class="urgency-option">
+                    <input type="radio" name="urgency" value="critical">
+                    <span>Critical Incident (4h response)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="prev-step secondary-button">Back</button>
+            <button type="button" class="next-step secondary-button">Continue</button>
+        </div>
+    </fieldset>
+
+    <!-- Step 3: Message & Submission -->
+    <fieldset class="form-step" data-step="3">
+        <legend class="form-step-title">How Can We Help?</legend>
+
+        <div class="form-group">
+            <label for="message">
+                Your Message <span class="required">*</span>
+            </label>
+            <textarea id="message" name="message" rows="6" required
+                      placeholder="Please describe your security needs, current challenges, and any specific requirements..."></textarea>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="attachment">Attach Files (Optional)</label>
+            <input type="file" id="attachment" name="attachment"
+                   accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg"
+                   multiple>
+            <small class="file-hint">Max 5MB total (PDF, DOC, TXT, or images)</small>
+        </div>
+
+        <div class="form-group consent-group">
+            <label class="checkbox-label">
+                <input type="checkbox" name="privacyConsent" required>
+                <span>I agree to Encrava's <a href="/privacy" target="_blank">Privacy Policy</a> and consent to my data being processed.</span>
+            </label>
+            <div class="error-message"></div>
+        </div>
+
+        <div class="form-group consent-group">
+            <label class="checkbox-label">
+                <input type="checkbox" name="marketingConsent">
+                <span>I'd like to receive occasional security updates and offers.</span>
+            </label>
+        </div>
+
+        <!-- Honeypot field -->
+        <div class="honeypot">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1">
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="prev-step secondary-button">Back</button>
+            <button type="submit" class="primary-button">
+                <span class="submit-text">Send Message</span>
+                <span class="loading-spinner" style="display:none;"></span>
+            </button>
+        </div>
+    </fieldset>
+
+    <!-- Confirmation Message -->
+    <div class="confirmation-message" style="display:none;">
+        <svg width="64" height="64" viewBox="0 0 24 24"><path fill="#10b981" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <h3>Thank You for Contacting Encrava!</h3>
+        <p>We've received your message and our security experts will respond within <strong class="response-time">48 hours</strong>.</p>
+        <p>For urgent matters, please call <a href="tel:+1234567890">+1 (234) 567-890</a>.</p>
+        <button type="button" class="primary-button new-inquiry">Submit Another Inquiry</button>
+    </div>
+</form>
+            </div>
+            <div class="contact-info">
+                <h2>Other Ways to Reach Us</h2>
+                <div class="info-card">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:info@cyverra.com">info@encrava.com</a></p>
+                    <p>General inquiries</p>
+                </div>
+                <div class="info-card">
+                    <h3>📞 Phone</h3>
+                    <p><a href="tel:+254XXXYYYZZZ">+254 XXX YYY ZZZ</a></p>
+                    <p>Mon-Fri, 8am-5pm EAT</p>
+                </div>
+                <div class="info-card">
+                    <h3>📍 Headquarters</h3>
+                    <p>Encrava Security Solutions</p>
+                    <p>ABC Towers, 5th Floor</p>
+                    <p>Nairobi, Kenya</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><img src="/assets/images/icons8-twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="/assets/images/icons8-linked-in.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="consultation-cta">
+        <div class="container">
+            <h2>Prefer a Meeting?</h2>
+            <p>Book a free 30-minute cybersecurity consultation with one of our experts.</p>
+            <a href="#" class="primary-button" id="bookConsultation">📅 Schedule a Call</a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Encrava</h3>
+                    <p>Smart, scalable cybersecurity solutions for modern businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/mdr.html">MDR</a></li>
+                        <li><a href="services/cloud-security.html">Cloud Security</a></li>
+                        <li><a href="services/pentesting.html">Pen Testing</a></li>
+                        <li><a href="services/training.html">Security Training</a></li>
+                        <li><a href="services/vciso.html">vCISO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/legal/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Encrava. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><img src="assets/images/icons8-twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="assets/images/icons8-linked-in.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Booking calendar integration would go here
+        document.getElementById('bookConsultation').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Booking system would open here. For now, please use the contact form.');
+        });
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
